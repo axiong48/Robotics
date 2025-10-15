@@ -5,7 +5,8 @@ FROM ghcr.io/sloretz/ros:${ROS_DISTRO}-desktop-full AS base
 # any utilities you want
 RUN apt-get update && apt-get install -y git wget python3-full python3-pip vim net-tools netcat-traditional tmux software-properties-common \
     gnome-terminal dbus-x11 at-spi2-core \
-    ros-${ROS_DISTRO}-ros-gz ros-${ROS_DISTRO}-nav2-bringup ros-${ROS_DISTRO}-nav2-msgs ros-${ROS_DISTRO}-navigation2 ros-${ROS_DISTRO}-topic-tools ros-dev-tools \
+    ros-${ROS_DISTRO}-ros-gz ros-${ROS_DISTRO}-nav2-bringup ros-${ROS_DISTRO}-nav2-msgs ros-${ROS_DISTRO}-navigation2 \
+    ros-${ROS_DISTRO}-nav2-route ros-${ROS_DISTRO}-topic-tools ros-dev-tools \
     ros-${ROS_DISTRO}-clearpath-desktop ros-${ROS_DISTRO}-clearpath-simulator \
     ros-${ROS_DISTRO}-turtlebot4-simulator ros-${ROS_DISTRO}-irobot-create-nodes \
     python3-vcstool python3-apt
@@ -41,5 +42,6 @@ WORKDIR /MRTP
 RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> /root/.bashrc
 RUN echo "source /.venv/bin/activate" >> /root/.bashrc
 RUN echo "export PYTHONPATH=/usr/lib/python3/dist-packages:\$PYTHONPATH" >> /root/.bashrc
+RUN echo "alias src='source install/setup.bash'" >> /root/.bashrc
 
 CMD ["/bin/bash"]
