@@ -20,6 +20,7 @@ limitations under the License.
 #include <tf2/LinearMath/Transform.h>
 #include <tf2/LinearMath/Vector3.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
+#include <tf2/impl/utils.h>
 
 
 int main(int argc,char ** argv) {
@@ -34,6 +35,8 @@ int main(int argc,char ** argv) {
   q3 = q1*q2;
   RCLCPP_INFO(nodeh->get_logger(), "%f %f %f %f",
             q3.x(), q3.y(), q3.z(), q3.w());
+  double yaw = tf2::impl::getYaw(q3);
+  RCLCPP_INFO(nodeh->get_logger(),"q3 has yaw %f",yaw);
   tf2::Matrix3x3 r;
   r.setRotation(q3);
   tf2::Vector3 o1(0,1,3),o2(1,4,0);
