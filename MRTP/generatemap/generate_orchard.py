@@ -169,6 +169,15 @@ def generate_sdf(image_path, output_path, lat, lon, elev, resolution, target_tre
 
     with open(output_path, "w") as f:
         f.write("\n".join(sdf))
+
+    # csv_filename = "tree_coordinates.csv"
+    # with open(csv_filename, "w") as f:
+    #     f.write("tree_id,x_local,y_local,latitude,longitude\n")
+    #     f.write("\n".join(tree_data_list))
+    
+    # print(f"--- Success! ---")
+    # print(f"1. World File: {output_path}")
+    # print(f"2. GPS Data:   {csv_filename} (Contains lat/lon for every tree)")
     
     print(f"--- Success! Saved world to {output_path} ---")
 
