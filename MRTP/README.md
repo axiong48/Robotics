@@ -1,4 +1,4 @@
-# Procedural Orchard Simulation for ROS 2
+# Generate Orchard Simulation for ROS 2
 
 This repository contains tools to procedurally generate 3D orchard environments for Gazebo based on 2D map images. **ROS 2 Jazzy**.
 
