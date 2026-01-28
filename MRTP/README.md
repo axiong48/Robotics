@@ -24,6 +24,7 @@ move to the folder MRTP/MRTP, and run
 
 Instructions:
 
+The lat and lon are determined to be in the center of the map.
 move to the generatemap folder and run the following:
 
      python3 generate_orchard.py [name_of_map].png --lat [Y] --lon - [X]
