@@ -29,12 +29,14 @@ move to the generatemap folder and run the following:
 
      python3 generate_orchard.py [name_of_map].png --lat [Y] --lon - [X]
 
+the following folders already have a file so you may run as an example:
+
+     python3 generate_orchard.py orchard_map.png --lat 37.335 --lon -121.881
 
 a sdf file should appear in the worlds now you may: 
 
-
+     cd ..
      colcon build
-
 
 
      ros2 launch clearpath_gz simulation.launch.py world:=generated_orchard
@@ -50,3 +52,4 @@ To enable .csv file of location of trees, uncomment the line
     print(f"--- Success! ---")
     print(f"1. World File: {output_path}")
     print(f"2. GPS Data:   {csv_filename} (Contains lat/lon for every tree)")
+
