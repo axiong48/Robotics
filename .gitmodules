@@ -1,0 +1,3 @@
+[submodule "MRTP/clearpath_simulator"]
+	path = MRTP/clearpath_simulator
+	url = https://github.com/axiong48/Robotics
