@@ -1,0 +1,119 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /.venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Configured 'flake8' exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /MRTP/MRTP/clearpath_simulator/build/clearpath_gz
+-- Install configuration: ""
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/config
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/config/gui.config
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/.DS_Store
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/solar_farm_geo.tif
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/orchard_geo.tif
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/pipeline_geo.tif
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch/simulation.launch.py
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch/robot_spawn.launch.py
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch/gz_sim.launch.py
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/WoodPlanksWorn33_COL_VAR1_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/inspection_water.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/MetalSpottyDiscoloration001_COL_3K_METALNESS.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/WoodPlanksWorn33_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/ConcreteWall001_COL_VAR1_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/SolarPanelsPolycrystallineTypeBFramedClean001_COL_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/MetalSpottyDiscoloration001_COL_3K_METALNESS.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/ConcreteWall001_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/SolarPanelsPolycrystallineTypeBFramedClean001_COL_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/inspection_world.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/InspectionBakeLarge.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/wibotic_tr301.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station_with_tripod.stl
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/wibotic_tr301.stl
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station.stl
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station_with_tripod.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/.DS_Store
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodFlooringMahoganyAfricanSanded001_COL_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodFlooring061_COL_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/InteriorDesignRugStarryNight001_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodPlanksWorn33_COL_VAR1_3K.jpg.002.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/office.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/MetalCorrodedHeavy001_COL_3K_METALNESS.jpg.002.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodFlooring044_COL_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/GroundClay002_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/whiteboard.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/office_construction.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/concrete_bag.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/MetalSpottyDiscoloration001_COL_3K_METALNESS.jpg.002.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/ConcreteWall001_COL_VAR1_3K.jpg.002.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/Bricks01_COL_VAR1_3K.jpg.002.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/MetalCorrugatedIronSheet002_METALNESS_3K_METALNESS.jpg.002.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/Tiles05_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/cp_walls.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/cardboard.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/TilesRectangularMirrorGray001_COL_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_leaves.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/GroundTireTracks001_COL_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/.DS_Store
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/GroundForest003_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_world.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_trunkstest.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_trunks.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/Ground.png
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/RustPlain007_COL_VAR1_3K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/GroundMoss001_COL_1K.jpg.001.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/WoodPlanksWornRed33_COL_VAR1_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/WoodPlanksWornWhite33_COL_VAR1_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/WoodPlanksWorn33_COL_VAR1_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/SolarPanelsPolycrystallineTypeBFramedClean001_COL_3K.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/MetalCorrugatedIronSheet002_METALNESS_3K_METALNESS.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/agriculture_world.dae
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/AgriBakeLarge.jpg
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/.DS_Store
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/generated_orchard.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/solar_farm.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/construction.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/warehouse.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/office.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/pipeline.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/orchard.sdf
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/ament_index/resource_index/package_run_dependencies/clearpath_gz
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/ament_index/resource_index/parent_prefix_path/clearpath_gz
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/ament_prefix_path.sh
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/ament_prefix_path.dsv
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/path.sh
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/path.dsv
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.bash
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.sh
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.zsh
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.dsv
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.dsv
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/ament_index/resource_index/packages/clearpath_gz
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/cmake/clearpath_gzConfig.cmake
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/cmake/clearpath_gzConfig-version.cmake
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.xml

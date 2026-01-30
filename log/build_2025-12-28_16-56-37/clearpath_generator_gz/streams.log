@@ -1,0 +1,90 @@
+[0.023s] Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake /MRTP/MRTP/clearpath_simulator/clearpath_generator_gz -DCMAKE_INSTALL_PREFIX=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz
+[0.213s] -- The C compiler identification is GNU 13.3.0
+[0.346s] -- The CXX compiler identification is GNU 13.3.0
+[0.366s] -- Detecting C compiler ABI info
+[0.489s] -- Detecting C compiler ABI info - done
+[0.505s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.506s] -- Detecting C compile features
+[0.506s] -- Detecting C compile features - done
+[0.516s] -- Detecting CXX compiler ABI info
+[0.651s] -- Detecting CXX compiler ABI info - done
+[0.667s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.668s] -- Detecting CXX compile features
+[0.668s] -- Detecting CXX compile features - done
+[0.713s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.883s] -- Found Python3: /.venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.533s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.872s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.872s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.879s] -- Added test 'lint_cmake' to check CMake code style
+[1.885s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.899s] -- Added test 'xmllint' to check XML markup files
+[1.916s] -- Configuring done (1.9s)
+[1.952s] -- Generating done (0.0s)
+[1.970s] -- Build files have been written to: /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz
+[1.971s] Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake /MRTP/MRTP/clearpath_simulator/clearpath_generator_gz -DCMAKE_INSTALL_PREFIX=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz
+[1.972s] Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz -- -j8 -l8
+[2.054s] Built target ament_cmake_python_copy_clearpath_generator_gz
+[2.221s] running egg_info
+[2.221s] creating clearpath_generator_gz.egg-info
+[2.234s] writing clearpath_generator_gz.egg-info/PKG-INFO
+[2.235s] writing dependency_links to clearpath_generator_gz.egg-info/dependency_links.txt
+[2.236s] writing top-level names to clearpath_generator_gz.egg-info/top_level.txt
+[2.236s] writing manifest file 'clearpath_generator_gz.egg-info/SOURCES.txt'
+[2.275s] reading manifest file 'clearpath_generator_gz.egg-info/SOURCES.txt'
+[2.276s] writing manifest file 'clearpath_generator_gz.egg-info/SOURCES.txt'
+[2.301s] Built target ament_cmake_python_build_clearpath_generator_gz_egg
+[2.311s] Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz -- -j8 -l8
+[2.322s] Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz
+[2.332s] -- Install configuration: ""
+[2.333s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/clearpath_generator_gz/generate_launch
+[2.335s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/clearpath_generator_gz/ptz_controller_node
+[2.337s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/clearpath_generator_gz/generate_param
+[2.340s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/pythonpath.sh
+[2.342s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/pythonpath.dsv
+[2.343s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info
+[2.345s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/PKG-INFO
+[2.347s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/SOURCES.txt
+[2.349s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/top_level.txt
+[2.351s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/dependency_links.txt
+[2.353s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz
+[2.354s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/nodes
+[2.355s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/nodes/ptz_controller_node
+[2.357s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch
+[2.358s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/sensors.py
+[2.360s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/__init__.py
+[2.362s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/generator.py
+[2.364s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/generate_launch
+[2.366s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/__init__.py
+[2.367s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param
+[2.369s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/sensors.py
+[2.371s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/__init__.py
+[2.372s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/generator.py
+[2.374s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/generate_param
+[2.434s] Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz'...
+[2.435s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/__init__.py'...
+[2.436s] Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch'...
+[2.436s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/__init__.py'...
+[2.437s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/generator.py'...
+[2.437s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/sensors.py'...
+[2.437s] Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/nodes'...
+[2.437s] Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param'...
+[2.439s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/__init__.py'...
+[2.439s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/generator.py'...
+[2.440s] Compiling '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/sensors.py'...
+[2.442s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/ament_index/resource_index/package_run_dependencies/clearpath_generator_gz
+[2.445s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/ament_index/resource_index/parent_prefix_path/clearpath_generator_gz
+[2.449s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/ament_prefix_path.sh
+[2.452s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/ament_prefix_path.dsv
+[2.454s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/path.sh
+[2.455s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/path.dsv
+[2.458s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.bash
+[2.460s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.sh
+[2.462s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.zsh
+[2.465s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.dsv
+[2.467s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.dsv
+[2.470s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/ament_index/resource_index/packages/clearpath_generator_gz
+[2.472s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/cmake/clearpath_generator_gzConfig.cmake
+[2.475s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/cmake/clearpath_generator_gzConfig-version.cmake
+[2.477s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.xml
+[2.483s] Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz

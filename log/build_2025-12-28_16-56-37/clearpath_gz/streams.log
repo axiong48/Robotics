@@ -1,0 +1,125 @@
+[0.019s] Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz': AMENT_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake /MRTP/MRTP/clearpath_simulator/clearpath_gz -DCMAKE_INSTALL_PREFIX=/MRTP/MRTP/clearpath_simulator/install/clearpath_gz
+[0.099s] -- The C compiler identification is GNU 13.3.0
+[0.160s] -- The CXX compiler identification is GNU 13.3.0
+[0.177s] -- Detecting C compiler ABI info
+[0.306s] -- Detecting C compiler ABI info - done
+[0.323s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.323s] -- Detecting C compile features
+[0.324s] -- Detecting C compile features - done
+[0.337s] -- Detecting CXX compiler ABI info
+[0.512s] -- Detecting CXX compiler ABI info - done
+[0.531s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.532s] -- Detecting CXX compile features
+[0.532s] -- Detecting CXX compile features - done
+[0.577s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.783s] -- Found Python3: /.venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.440s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.813s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.813s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.823s] -- Added test 'lint_cmake' to check CMake code style
+[1.831s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.857s] -- Added test 'xmllint' to check XML markup files
+[1.875s] -- Configuring done (1.8s)
+[1.899s] -- Generating done (0.0s)
+[1.914s] -- Build files have been written to: /MRTP/MRTP/clearpath_simulator/build/clearpath_gz
+[1.915s] Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz' returned '0': AMENT_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake /MRTP/MRTP/clearpath_simulator/clearpath_gz -DCMAKE_INSTALL_PREFIX=/MRTP/MRTP/clearpath_simulator/install/clearpath_gz
+[1.916s] Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz': AMENT_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_gz -- -j8 -l8
+[1.960s] Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz' returned '0': AMENT_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_gz -- -j8 -l8
+[1.961s] Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz': AMENT_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_gz
+[1.971s] -- Install configuration: ""
+[1.971s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/config
+[1.977s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/config/gui.config
+[1.981s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif
+[1.982s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/.DS_Store
+[1.984s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/solar_farm_geo.tif
+[2.385s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/orchard_geo.tif
+[2.810s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/geotif/pipeline_geo.tif
+[3.272s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch
+[3.273s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch/simulation.launch.py
+[3.275s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch/robot_spawn.launch.py
+[3.277s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/launch/gz_sim.launch.py
+[3.279s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes
+[3.280s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline
+[3.282s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/WoodPlanksWorn33_COL_VAR1_3K.jpg
+[3.298s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/inspection_water.dae
+[3.300s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/MetalSpottyDiscoloration001_COL_3K_METALNESS.jpg
+[3.321s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/WoodPlanksWorn33_COL_VAR1_3K.jpg.001.jpg
+[3.336s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/ConcreteWall001_COL_VAR1_3K.jpg
+[3.344s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/SolarPanelsPolycrystallineTypeBFramedClean001_COL_3K.jpg.001.jpg
+[3.377s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/MetalSpottyDiscoloration001_COL_3K_METALNESS.jpg.001.jpg
+[3.399s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/ConcreteWall001_COL_VAR1_3K.jpg.001.jpg
+[3.408s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/SolarPanelsPolycrystallineTypeBFramedClean001_COL_3K.jpg
+[3.441s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/inspection_world.dae
+[3.450s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/pipeline/InspectionBakeLarge.jpg
+[3.542s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories
+[3.543s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/wibotic_tr301.dae
+[3.642s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station.dae
+[3.649s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station_with_tripod.stl
+[3.654s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/wibotic_tr301.stl
+[3.669s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station.stl
+[3.674s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/accessories/base_station_with_tripod.dae
+[3.681s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/.DS_Store
+[3.683s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office
+[3.685s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodFlooringMahoganyAfricanSanded001_COL_3K.jpg.001.jpg
+[3.713s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodFlooring061_COL_3K.jpg.001.jpg
+[3.754s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/InteriorDesignRugStarryNight001_COL_VAR1_3K.jpg.001.jpg
+[3.784s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodPlanksWorn33_COL_VAR1_3K.jpg.002.jpg
+[3.810s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/office.dae
+[3.873s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/MetalCorrodedHeavy001_COL_3K_METALNESS.jpg.002.jpg
+[4.318s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/WoodFlooring044_COL_3K.jpg.001.jpg
+[4.434s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/GroundClay002_COL_VAR1_3K.jpg.001.jpg
+[4.484s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/whiteboard.jpg
+[4.488s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/office_construction.dae
+[4.497s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/concrete_bag.jpg
+[4.499s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/MetalSpottyDiscoloration001_COL_3K_METALNESS.jpg.002.jpg
+[4.560s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/ConcreteWall001_COL_VAR1_3K.jpg.002.jpg
+[4.579s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/Bricks01_COL_VAR1_3K.jpg.002.jpg
+[4.634s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/MetalCorrugatedIronSheet002_METALNESS_3K_METALNESS.jpg.002.jpg
+[4.643s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/Tiles05_COL_VAR1_3K.jpg.001.jpg
+[4.691s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/cp_walls.jpg
+[4.693s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/cardboard.jpg
+[4.698s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/office/TilesRectangularMirrorGray001_COL_3K.jpg.001.jpg
+[4.708s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard
+[4.709s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_leaves.dae
+[4.761s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/GroundTireTracks001_COL_3K.jpg.001.jpg
+[4.848s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/.DS_Store
+[4.852s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/GroundForest003_COL_VAR1_3K.jpg.001.jpg
+[4.908s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_world.dae
+[4.918s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_trunkstest.dae
+[5.076s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/orchard_trunks.dae
+[5.204s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/Ground.png
+[5.639s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/RustPlain007_COL_VAR1_3K.jpg.001.jpg
+[5.678s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/orchard/GroundMoss001_COL_1K.jpg.001.jpg
+[5.689s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm
+[5.690s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/WoodPlanksWornRed33_COL_VAR1_3K.jpg
+[5.708s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/WoodPlanksWornWhite33_COL_VAR1_3K.jpg
+[5.719s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/WoodPlanksWorn33_COL_VAR1_3K.jpg
+[5.734s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/SolarPanelsPolycrystallineTypeBFramedClean001_COL_3K.jpg
+[5.768s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/MetalCorrugatedIronSheet002_METALNESS_3K_METALNESS.jpg
+[5.774s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/agriculture_world.dae
+[5.789s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/meshes/solar_farm/AgriBakeLarge.jpg
+[5.923s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds
+[5.924s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/.DS_Store
+[5.927s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/generated_orchard.sdf
+[5.932s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/solar_farm.sdf
+[5.934s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/construction.sdf
+[5.936s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/warehouse.sdf
+[5.938s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/office.sdf
+[5.940s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/pipeline.sdf
+[5.942s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/worlds/orchard.sdf
+[5.946s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/ament_index/resource_index/package_run_dependencies/clearpath_gz
+[5.948s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/ament_index/resource_index/parent_prefix_path/clearpath_gz
+[5.950s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/ament_prefix_path.sh
+[5.952s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/ament_prefix_path.dsv
+[5.954s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/path.sh
+[5.956s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/environment/path.dsv
+[5.958s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.bash
+[5.959s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.sh
+[5.961s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.zsh
+[5.963s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/local_setup.dsv
+[5.965s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.dsv
+[5.967s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/ament_index/resource_index/packages/clearpath_gz
+[5.969s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/cmake/clearpath_gzConfig.cmake
+[5.971s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/cmake/clearpath_gzConfig-version.cmake
+[5.973s] -- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.xml
+[5.978s] Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz' returned '0': AMENT_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ PYTHONPATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_gz

@@ -21,12 +21,13 @@ from launch.actions import DeclareLaunchArgument
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import EnvironmentVariable, LaunchConfiguration, PathJoinSubstitution
+from launch_ros.actions import Node
 
 
 ARGUMENTS = [
-    DeclareLaunchArgument('rviz', default_value='false',
+    DeclareLaunchArgument('rviz', default_value='true',
                           choices=['true', 'false'], description='Start rviz.'),
-    DeclareLaunchArgument('world', default_value='warehouse',
+    DeclareLaunchArgument('world', default_value='generated_orchard',
                           choices=[
                               'construction',
                               'office',
@@ -34,10 +35,11 @@ ARGUMENTS = [
                               'pipeline',
                               'solar_farm',
                               'warehouse',
+                              'generated_orchard',
                           ],
                           description='Gazebo World'),
     DeclareLaunchArgument('setup_path',
-                          default_value=[EnvironmentVariable('HOME'), '/clearpath/'],
+                          default_value=['/MRTP/MRTP/my_robot_config/'],
                           description='Clearpath setup path'),
     DeclareLaunchArgument('use_sim_time', default_value='true',
                           choices=['true', 'false'],
@@ -82,9 +84,28 @@ def generate_launch_description():
             ('z', LaunchConfiguration('z')),
             ('yaw', LaunchConfiguration('yaw'))]
     )
+    
+    bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            # General
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+            
+            # Sensors (Adjusted for the robot.yaml names above)
+            '/a200_0000/sensors/lidar/scan@sensor_msgs/msg/LaserScan[gz.msgs.LaserScan',
+            '/a200_0000/sensors/gps/fix@sensor_msgs/msg/NavSatFix[gz.msgs.NavSat',
+            
+            # Drive
+            '/a200_0000/cmd_vel@geometry_msgs/msg/Twist@gz.msgs.Twist',
+            '/model/a200_0000/odometry@nav_msgs/msg/Odometry[gz.msgs.Odometry'
+        ],
+        output='screen'
+    )
 
     # Create launch description and add actions
     ld = LaunchDescription(ARGUMENTS)
     ld.add_action(gz_sim)
     ld.add_action(robot_spawn)
+    ld.add_action(bridge)
     return ld

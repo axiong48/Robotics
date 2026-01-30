@@ -1,0 +1,52 @@
+Built target ament_cmake_python_copy_clearpath_generator_gz
+running egg_info
+writing clearpath_generator_gz.egg-info/PKG-INFO
+writing dependency_links to clearpath_generator_gz.egg-info/dependency_links.txt
+writing top-level names to clearpath_generator_gz.egg-info/top_level.txt
+reading manifest file 'clearpath_generator_gz.egg-info/SOURCES.txt'
+writing manifest file 'clearpath_generator_gz.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_clearpath_generator_gz_egg
+-- Install configuration: ""
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/clearpath_generator_gz/generate_launch
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/clearpath_generator_gz/ptz_controller_node
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/clearpath_generator_gz/generate_param
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/pythonpath.sh
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/pythonpath.dsv
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/PKG-INFO
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/SOURCES.txt
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/top_level.txt
+-- Installing: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz-2.7.0-py3.12.egg-info/dependency_links.txt
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/nodes
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/nodes/ptz_controller_node
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/sensors.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/__init__.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/generator.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch/generate_launch
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/__init__.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/sensors.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/__init__.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/generator.py
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param/generate_param
+Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz'...
+Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/launch'...
+Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/nodes'...
+Listing '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages/clearpath_generator_gz/param'...
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/ament_index/resource_index/package_run_dependencies/clearpath_generator_gz
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/ament_index/resource_index/parent_prefix_path/clearpath_generator_gz
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/ament_prefix_path.sh
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/ament_prefix_path.dsv
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/path.sh
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/environment/path.dsv
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.bash
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.sh
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.zsh
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/local_setup.dsv
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.dsv
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/ament_index/resource_index/packages/clearpath_generator_gz
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/cmake/clearpath_generator_gzConfig.cmake
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/cmake/clearpath_generator_gzConfig-version.cmake
+-- Up-to-date: /MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.xml

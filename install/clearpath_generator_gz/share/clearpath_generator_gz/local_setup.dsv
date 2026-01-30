@@ -1,0 +1,3 @@
+source;share/clearpath_generator_gz/environment/ament_prefix_path.sh
+source;share/clearpath_generator_gz/environment/path.sh
+source;share/clearpath_generator_gz/environment/pythonpath.sh

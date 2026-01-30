@@ -1,0 +1,358 @@
+[0.099s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.099s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffaa3e3aa0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffaa3b1cd0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffaa3b1cd0>>, mixin_verb=('build',))
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.133s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.134s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.134s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.134s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.134s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/MRTP/MRTP/clearpath_simulator'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_generator_gz) by extension 'ros'
+[0.162s] DEBUG:colcon.colcon_core.package_identification:Package 'clearpath_generator_gz' with type 'ros.ament_cmake' and name 'clearpath_generator_gz'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_gz) by extension 'ros'
+[0.164s] DEBUG:colcon.colcon_core.package_identification:Package 'clearpath_gz' with type 'ros.ament_cmake' and name 'clearpath_gz'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(clearpath_simulator) by extension 'ros'
+[0.165s] DEBUG:colcon.colcon_core.package_identification:Package 'clearpath_simulator' with type 'ros.ament_cmake' and name 'clearpath_simulator'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'colcon_pkg'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extensions ['colcon_meta']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'colcon_meta'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extensions ['ros']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'ros'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extensions ['cmake', 'python']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'cmake'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'python'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extensions ['python_setup_py']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(docs/construction) by extension 'python_setup_py'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'cmake'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'python'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extensions ['python_setup_py']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/office) by extension 'python_setup_py'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'ros'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extensions ['cmake', 'python']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'cmake'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(docs/orchard) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/pipeline) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/solar_farm) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(docs/warehouse) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.177s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_generator_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'clearpath_generator_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz', 'merge_install': False, 'path': '/MRTP/MRTP/clearpath_simulator/clearpath_generator_gz', 'symlink_install': False, 'test_result_base': None}
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'cmake_target' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'cmake_clean_cache' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'cmake_force_configure' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'ament_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'catkin_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_gz' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.194s] DEBUG:colcon.colcon_core.verb:Building package 'clearpath_gz' with the following arguments: {'ament_cmake_args': None, 'build_base': '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz', 'merge_install': False, 'path': '/MRTP/MRTP/clearpath_simulator/clearpath_gz', 'symlink_install': False, 'test_result_base': None}
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'cmake_target' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.194s] Level 5:colcon.colcon_core.verb:set package 'clearpath_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.194s] DEBUG:colcon.colcon_core.verb:Building package 'clearpath_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/MRTP/MRTP/clearpath_simulator/build/clearpath_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator', 'merge_install': False, 'path': '/MRTP/MRTP/clearpath_simulator/clearpath_simulator', 'symlink_install': False, 'test_result_base': None}
+[0.194s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.195s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.195s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/MRTP/MRTP/clearpath_simulator/clearpath_generator_gz' with build type 'ament_cmake'
+[0.196s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/MRTP/MRTP/clearpath_simulator/clearpath_generator_gz'
+[0.197s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.197s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.197s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz -- -j8 -l8
+[0.563s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz -- -j8 -l8
+[0.574s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz
+[0.646s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(clearpath_generator_gz)
+[0.648s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz' for CMake module files
+[0.648s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_generator_gz
+[0.650s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz' for CMake config files
+[0.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_generator_gz', 'cmake_prefix_path')
+[0.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/cmake_prefix_path.ps1'
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/cmake_prefix_path.dsv'
+[0.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/cmake_prefix_path.sh'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/bin'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/pkgconfig/clearpath_generator_gz.pc'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages'
+[0.660s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_generator_gz', 'pythonpath')
+[0.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/pythonpath.ps1'
+[0.660s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/pythonpath.dsv'
+[0.661s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/pythonpath.sh'
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/bin'
+[0.662s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.ps1'
+[0.663s] INFO:colcon.colcon_core.shell:Creating package descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.dsv'
+[0.663s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.sh'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.bash'
+[0.665s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.zsh'
+[0.665s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/colcon-core/packages/clearpath_generator_gz)
+[0.667s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(clearpath_generator_gz)
+[0.667s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz' for CMake module files
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz' for CMake config files
+[0.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_generator_gz', 'cmake_prefix_path')
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/cmake_prefix_path.ps1'
+[0.674s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/cmake_prefix_path.dsv'
+[0.674s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/cmake_prefix_path.sh'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/bin'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/pkgconfig/clearpath_generator_gz.pc'
+[0.675s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/lib/python3.12/site-packages'
+[0.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_generator_gz', 'pythonpath')
+[0.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/pythonpath.ps1'
+[0.677s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/pythonpath.dsv'
+[0.678s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/hook/pythonpath.sh'
+[0.679s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/bin'
+[0.679s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.ps1'
+[0.679s] INFO:colcon.colcon_core.shell:Creating package descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.dsv'
+[0.680s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.sh'
+[0.680s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.bash'
+[0.681s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/clearpath_generator_gz/package.zsh'
+[0.682s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz/share/colcon-core/packages/clearpath_generator_gz)
+[0.682s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/MRTP/MRTP/clearpath_simulator/clearpath_gz' with build type 'ament_cmake'
+[0.682s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/MRTP/MRTP/clearpath_simulator/clearpath_gz'
+[0.683s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.683s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.703s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_gz -- -j8 -l8
+[0.749s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz' returned '0': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_gz -- -j8 -l8
+[0.751s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_gz
+[0.823s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(clearpath_gz)
+[0.823s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz' for CMake module files
+[0.823s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_gz' returned '0': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_gz
+[0.826s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz' for CMake config files
+[0.827s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_gz', 'cmake_prefix_path')
+[0.828s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/hook/cmake_prefix_path.ps1'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/hook/cmake_prefix_path.dsv'
+[0.829s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/hook/cmake_prefix_path.sh'
+[0.830s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/bin'
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/lib/pkgconfig/clearpath_gz.pc'
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/lib/python3.12/site-packages'
+[0.831s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/bin'
+[0.832s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.ps1'
+[0.832s] INFO:colcon.colcon_core.shell:Creating package descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.dsv'
+[0.833s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.sh'
+[0.833s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.bash'
+[0.834s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.zsh'
+[0.834s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/colcon-core/packages/clearpath_gz)
+[0.836s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(clearpath_gz)
+[0.836s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz' for CMake module files
+[0.838s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz' for CMake config files
+[0.839s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_gz', 'cmake_prefix_path')
+[0.839s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/hook/cmake_prefix_path.ps1'
+[0.840s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/hook/cmake_prefix_path.dsv'
+[0.841s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/hook/cmake_prefix_path.sh'
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/bin'
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/lib/pkgconfig/clearpath_gz.pc'
+[0.842s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/lib/python3.12/site-packages'
+[0.843s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/bin'
+[0.843s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.ps1'
+[0.844s] INFO:colcon.colcon_core.shell:Creating package descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.dsv'
+[0.845s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.sh'
+[0.845s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.bash'
+[0.846s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/clearpath_gz/package.zsh'
+[0.847s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/MRTP/MRTP/clearpath_simulator/install/clearpath_gz/share/colcon-core/packages/clearpath_gz)
+[0.847s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/MRTP/MRTP/clearpath_simulator/clearpath_simulator' with build type 'ament_cmake'
+[0.848s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/MRTP/MRTP/clearpath_simulator/clearpath_simulator'
+[0.848s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.848s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.889s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_simulator': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_simulator -- -j8 -l8
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_simulator' returned '0': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --build /MRTP/MRTP/clearpath_simulator/build/clearpath_simulator -- -j8 -l8
+[0.950s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_simulator': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_simulator
+[0.969s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(clearpath_simulator)
+[0.970s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator' for CMake module files
+[0.970s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/MRTP/MRTP/clearpath_simulator/build/clearpath_simulator' returned '0': CMAKE_PREFIX_PATH=/MRTP/MRTP/clearpath_simulator/install/clearpath_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_generator_gz:/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator:/MRTP/MRTP/install/tracking:/MRTP/MRTP/install/talklisten:/MRTP/MRTP/install/robctl:/MRTP/MRTP/install/remap:/MRTP/MRTP/install/oopsquare:/MRTP/MRTP/install/lab7:/MRTP/MRTP/install/navigation:/MRTP/MRTP/install/multipletopics:/MRTP/MRTP/install/moverobo:/MRTP/MRTP/install/lab4:/MRTP/MRTP/install/examples:/MRTP/MRTP/install/clearpath_simulator:/MRTP/MRTP/install/clearpath_gz:/MRTP/MRTP/install/clearpath_generator_gz:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/MRTP/MRTP/install/gazeboenvs:/opt/ros/jazzy PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/cmake --install /MRTP/MRTP/clearpath_simulator/build/clearpath_simulator
+[0.973s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator' for CMake config files
+[0.974s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_simulator', 'cmake_prefix_path')
+[0.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/hook/cmake_prefix_path.ps1'
+[0.975s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/hook/cmake_prefix_path.dsv'
+[0.976s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/hook/cmake_prefix_path.sh'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/bin'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/lib/pkgconfig/clearpath_simulator.pc'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/lib/python3.12/site-packages'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/bin'
+[0.978s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.ps1'
+[0.978s] INFO:colcon.colcon_core.shell:Creating package descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.dsv'
+[0.979s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.sh'
+[0.979s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.bash'
+[0.980s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.zsh'
+[0.980s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/colcon-core/packages/clearpath_simulator)
+[0.981s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(clearpath_simulator)
+[0.982s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator' for CMake module files
+[0.984s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator' for CMake config files
+[0.985s] Level 1:colcon.colcon_core.shell:create_environment_hook('clearpath_simulator', 'cmake_prefix_path')
+[0.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/hook/cmake_prefix_path.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/hook/cmake_prefix_path.dsv'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/hook/cmake_prefix_path.sh'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/bin'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/lib/pkgconfig/clearpath_simulator.pc'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/lib/python3.12/site-packages'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/bin'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.ps1'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package descriptor '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.dsv'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.sh'
+[0.989s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.bash'
+[0.990s] INFO:colcon.colcon_core.shell:Creating package script '/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/clearpath_simulator/package.zsh'
+[0.990s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/MRTP/MRTP/clearpath_simulator/install/clearpath_simulator/share/colcon-core/packages/clearpath_simulator)
+[0.991s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.991s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.991s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.991s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.998s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[0.998s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.998s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.998s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.004s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally with the following error: Autolaunch error: X11 initialization failed.
+
+[1.004s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.005s] INFO:colcon.colcon_core.shell:Creating prefix script '/MRTP/MRTP/clearpath_simulator/install/local_setup.ps1'
+[1.006s] INFO:colcon.colcon_core.shell:Creating prefix util module '/MRTP/MRTP/clearpath_simulator/install/_local_setup_util_ps1.py'
+[1.007s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/MRTP/MRTP/clearpath_simulator/install/setup.ps1'
+[1.014s] INFO:colcon.colcon_core.shell:Creating prefix script '/MRTP/MRTP/clearpath_simulator/install/local_setup.sh'
+[1.014s] INFO:colcon.colcon_core.shell:Creating prefix util module '/MRTP/MRTP/clearpath_simulator/install/_local_setup_util_sh.py'
+[1.015s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/MRTP/MRTP/clearpath_simulator/install/setup.sh'
+[1.022s] INFO:colcon.colcon_core.shell:Creating prefix script '/MRTP/MRTP/clearpath_simulator/install/local_setup.bash'
+[1.023s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/MRTP/MRTP/clearpath_simulator/install/setup.bash'
+[1.029s] INFO:colcon.colcon_core.shell:Creating prefix script '/MRTP/MRTP/clearpath_simulator/install/local_setup.zsh'
+[1.030s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/MRTP/MRTP/clearpath_simulator/install/setup.zsh'
