@@ -17,6 +17,8 @@ pip3 install opencv-python numpy
 Cloning:
 
      git clone https://github.com/axiong48/Robotics
+
+     git pull origin main --recurse-submodules
      
 move to the folder MRTP/MRTP, and run
 
