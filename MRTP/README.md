@@ -22,34 +22,22 @@ move to the folder MRTP/MRTP, and run
 
      colcon build
 
-Instructions:
+Instructions [UPDATED 2/10]:
 
-The lat and lon are determined to be in the center of the map.
-move to the generatemap folder and run the following:
+Run the following Node:
 
-     python3 generate_orchard.py [name_of_map].png --lat [Y] --lon - [X]
+     ros2 run generatemap tcp_demux_node --ros-args -p output_path:="/MRTP/MRTP/clearpath_simulator/clearpath_gz/worlds/generated_orchard.sdf"
 
-the following folders already have a file so you may run as an example:
 
-     python3 generate_orchard.py orchard_map.png --lat 37.335 --lon -121.881
+Node should now be listening to TCP port 12346 so run the bin: 
 
-a sdf file should appear in the worlds now you may: 
+     nc localhost 12346 < create_test.bin
 
-     cd ..
+SDF file output will be in the worlds folder:
+
+     cd..
      colcon build
-
-
      ros2 launch clearpath_gz simulation.launch.py world:=generated_orchard
 
-To enable .csv file of location of trees, uncomment the line 
 
-
-     csv_filename = "tree_coordinates.csv"
-    with open(csv_filename, "w") as f:
-        f.write("tree_id,x_local,y_local,latitude,longitude\n")
-        f.write("\n".join(tree_data_list))
-    
-    print(f"--- Success! ---")
-    print(f"1. World File: {output_path}")
-    print(f"2. GPS Data:   {csv_filename} (Contains lat/lon for every tree)")
 
