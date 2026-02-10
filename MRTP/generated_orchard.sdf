@@ -1,0 +1,3071 @@
+<?xml version='1.0' encoding='ASCII'?>
+<sdf version='1.4'>
+  <world name='procedural_orchard'>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>37.2661</latitude_deg>
+      <longitude_deg>-120.42</longitude_deg>
+      <elevation>0.0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+
+    <physics type='ode'>
+      <max_step_size>0.003</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='libgz-sim-physics-system.so'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='libgz-sim-user-commands-system.so'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='libgz-sim-scene-broadcaster-system.so'/>
+    <plugin name='gz::sim::systems::Sensors' filename='libgz-sim-sensors-system.so'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin name='gz::sim::systems::Imu' filename='libgz-sim-imu-system.so'/>
+    <plugin name='gz::sim::systems::NavSat' filename='libgz-sim-navsat-system.so'/>
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <background>0.3 0.7 0.9 1</background>
+      <shadows>1</shadows>
+      <sky><clouds><speed>12</speed></clouds></sky>
+    </scene>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.5 -1.0</direction>
+    </light>
+    <model name='orchard_ground'>
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <link name='link'>
+        <collision name='col'><geometry><mesh><uri>model://orchard/orchard_world.dae</uri></mesh></geometry></collision>
+        <visual name='vis'><geometry><mesh><uri>model://orchard/orchard_world.dae</uri></mesh></geometry></visual>
+      </link>
+    </model>
+              <model name='tree_1'>
+      <static>true</static>
+      <pose>-29.3163 36.7918 0 0 0 4.39242</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.22847 1.22847 1.22847</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_2'>
+      <static>true</static>
+      <pose>-20.934 36.7648 0 0 0 4.30892</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.07827 1.07827 1.07827</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_3'>
+      <static>true</static>
+      <pose>-12.5516 36.7379 0 0 0 4.8649</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.13956 1.13956 1.13956</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_4'>
+      <static>true</static>
+      <pose>-4.16929 36.711 0 0 0 5.75711</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.27005 1.27005 1.27005</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_5'>
+      <static>true</static>
+      <pose>4.21305 36.684 0 0 0 1.27893</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25111 1.25111 1.25111</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_6'>
+      <static>true</static>
+      <pose>12.5954 36.657 0 0 0 3.44345</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23519 1.23519 1.23519</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_7'>
+      <static>true</static>
+      <pose>20.9777 36.6301 0 0 0 5.68586</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.11937 1.11937 1.11937</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_8'>
+      <static>true</static>
+      <pose>29.3601 36.6031 0 0 0 5.49137</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.26225 1.26225 1.26225</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_9'>
+      <static>true</static>
+      <pose>-29.306 32.4171 0 0 0 3.62037</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16623 1.16623 1.16623</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_10'>
+      <static>true</static>
+      <pose>-20.9274 32.4066 0 0 0 1.72103</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.08798 1.08798 1.08798</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_11'>
+      <static>true</static>
+      <pose>-12.5487 32.396 0 0 0 3.09383</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25174 1.25174 1.25174</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_12'>
+      <static>true</static>
+      <pose>-4.17003 32.3854 0 0 0 5.33406</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.15819 1.15819 1.15819</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_13'>
+      <static>true</static>
+      <pose>4.20864 32.3748 0 0 0 1.82874</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16573 1.16573 1.16573</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_14'>
+      <static>true</static>
+      <pose>12.5873 32.3642 0 0 0 4.29882</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.0921 1.0921 1.0921</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_15'>
+      <static>true</static>
+      <pose>20.966 32.3536 0 0 0 0.873728</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.21976 1.21976 1.21976</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_16'>
+      <static>true</static>
+      <pose>29.3447 32.343 0 0 0 3.09398</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19073 1.19073 1.19073</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_17'>
+      <static>true</static>
+      <pose>-29.2958 28.0425 0 0 0 4.55061</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24556 1.24556 1.24556</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_18'>
+      <static>true</static>
+      <pose>-20.9208 28.0483 0 0 0 1.39465</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.09158 1.09158 1.09158</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_19'>
+      <static>true</static>
+      <pose>-12.5458 28.0541 0 0 0 0.761891</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16632 1.16632 1.16632</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_20'>
+      <static>true</static>
+      <pose>-4.17077 28.0599 0 0 0 2.26473</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.08226 1.08226 1.08226</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_21'>
+      <static>true</static>
+      <pose>4.20424 28.0657 0 0 0 5.85527</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.12579 1.12579 1.12579</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_22'>
+      <static>true</static>
+      <pose>12.5792 28.0714 0 0 0 3.90874</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.26198 1.26198 1.26198</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_23'>
+      <static>true</static>
+      <pose>20.9542 28.0772 0 0 0 5.14045</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24526 1.24526 1.24526</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_24'>
+      <static>true</static>
+      <pose>29.3293 28.0829 0 0 0 2.10469</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16575 1.16575 1.16575</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_25'>
+      <static>true</static>
+      <pose>-29.2855 23.6679 0 0 0 4.13956</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.14201 1.14201 1.14201</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_26'>
+      <static>true</static>
+      <pose>-20.9142 23.6901 0 0 0 1.62676</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19207 1.19207 1.19207</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_27'>
+      <static>true</static>
+      <pose>-12.5429 23.7122 0 0 0 0.455814</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.08529 1.08529 1.08529</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_28'>
+      <static>true</static>
+      <pose>-4.17151 23.7344 0 0 0 4.06652</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.07516 1.07516 1.07516</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_29'>
+      <static>true</static>
+      <pose>4.19983 23.7565 0 0 0 1.81125</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.13484 1.13484 1.13484</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_30'>
+      <static>true</static>
+      <pose>12.5712 23.7786 0 0 0 0.572703</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.12732 1.12732 1.12732</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_31'>
+      <static>true</static>
+      <pose>20.9425 23.8008 0 0 0 5.8716</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.14971 1.14971 1.14971</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_32'>
+      <static>true</static>
+      <pose>29.3138 23.8229 0 0 0 1.66794</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18617 1.18617 1.18617</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_33'>
+      <static>true</static>
+      <pose>-29.2753 19.2933 0 0 0 4.78639</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.20371 1.20371 1.20371</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_34'>
+      <static>true</static>
+      <pose>-20.9076 19.3318 0 0 0 0.98817</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16373 1.16373 1.16373</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_35'>
+      <static>true</static>
+      <pose>-12.5399 19.3703 0 0 0 3.93117</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25604 1.25604 1.25604</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_36'>
+      <static>true</static>
+      <pose>-4.17225 19.4088 0 0 0 1.30592</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1708 1.1708 1.1708</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_37'>
+      <static>true</static>
+      <pose>4.19542 19.4473 0 0 0 2.67789</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1801 1.1801 1.1801</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_38'>
+      <static>true</static>
+      <pose>12.5631 19.4858 0 0 0 2.47802</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24365 1.24365 1.24365</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_39'>
+      <static>true</static>
+      <pose>20.9308 19.5243 0 0 0 2.0484</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.10701 1.10701 1.10701</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_40'>
+      <static>true</static>
+      <pose>29.2984 19.5628 0 0 0 4.01278</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.22018 1.22018 1.22018</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_41'>
+      <static>true</static>
+      <pose>-29.265 14.9186 0 0 0 2.12524</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.2798 1.2798 1.2798</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_42'>
+      <static>true</static>
+      <pose>-20.901 14.9735 0 0 0 0.854982</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25943 1.25943 1.25943</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_43'>
+      <static>true</static>
+      <pose>-12.537 15.0284 0 0 0 0.0339829</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.14585 1.14585 1.14585</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_44'>
+      <static>true</static>
+      <pose>-4.17299 15.0833 0 0 0 4.86561</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23277 1.23277 1.23277</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_45'>
+      <static>true</static>
+      <pose>4.19101 15.1382 0 0 0 0.720479</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.11852 1.11852 1.11852</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_46'>
+      <static>true</static>
+      <pose>12.555 15.193 0 0 0 4.53021</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25196 1.25196 1.25196</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_47'>
+      <static>true</static>
+      <pose>20.919 15.2479 0 0 0 2.82181</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.06147 1.06147 1.06147</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_48'>
+      <static>true</static>
+      <pose>29.283 15.3027 0 0 0 4.44792</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.28018 1.28018 1.28018</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_49'>
+      <static>true</static>
+      <pose>-29.2548 10.544 0 0 0 2.97756</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.09921 1.09921 1.09921</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_50'>
+      <static>true</static>
+      <pose>-20.8944 10.6153 0 0 0 0.590114</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25188 1.25188 1.25188</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_51'>
+      <static>true</static>
+      <pose>-12.5341 10.6865 0 0 0 2.40581</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.07323 1.07323 1.07323</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_52'>
+      <static>true</static>
+      <pose>-4.17374 10.7578 0 0 0 4.12881</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.12041 1.12041 1.12041</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_53'>
+      <static>true</static>
+      <pose>4.18661 10.829 0 0 0 0.827509</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23879 1.23879 1.23879</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_54'>
+      <static>true</static>
+      <pose>12.5469 10.9002 0 0 0 0.335662</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.06202 1.06202 1.06202</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_55'>
+      <static>true</static>
+      <pose>20.9073 10.9715 0 0 0 4.90634</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1568 1.1568 1.1568</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_56'>
+      <static>true</static>
+      <pose>29.2676 11.0427 0 0 0 2.78069</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.21148 1.21148 1.21148</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_57'>
+      <static>true</static>
+      <pose>-29.2445 6.16938 0 0 0 3.7048</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.07779 1.07779 1.07779</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_58'>
+      <static>true</static>
+      <pose>-20.8878 6.25701 0 0 0 3.32945</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18501 1.18501 1.18501</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_59'>
+      <static>true</static>
+      <pose>-12.5312 6.34463 0 0 0 2.27399</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18884 1.18884 1.18884</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_60'>
+      <static>true</static>
+      <pose>-4.17448 6.43224 0 0 0 5.58401</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.121 1.121 1.121</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_61'>
+      <static>true</static>
+      <pose>4.1822 6.51985 0 0 0 1.06701</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1612 1.1612 1.1612</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_62'>
+      <static>true</static>
+      <pose>12.5389 6.60744 0 0 0 3.30337</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19227 1.19227 1.19227</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_63'>
+      <static>true</static>
+      <pose>20.8955 6.69503 0 0 0 3.74601</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19442 1.19442 1.19442</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_64'>
+      <static>true</static>
+      <pose>29.2522 6.78261 0 0 0 5.21384</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.10452 1.10452 1.10452</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_65'>
+      <static>true</static>
+      <pose>-29.2342 1.79475 0 0 0 0.621014</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.06635 1.06635 1.06635</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_66'>
+      <static>true</static>
+      <pose>-20.8812 1.89874 0 0 0 1.06594</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.26554 1.26554 1.26554</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_67'>
+      <static>true</static>
+      <pose>-12.5282 2.00273 0 0 0 1.4168</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1624 1.1624 1.1624</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_68'>
+      <static>true</static>
+      <pose>-4.17522 2.10671 0 0 0 1.82733</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24291 1.24291 1.24291</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_69'>
+      <static>true</static>
+      <pose>4.17779 2.21068 0 0 0 5.51838</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.13335 1.13335 1.13335</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_70'>
+      <static>true</static>
+      <pose>12.5308 2.31464 0 0 0 5.12022</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.13033 1.13033 1.13033</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_71'>
+      <static>true</static>
+      <pose>20.8838 2.4186 0 0 0 0.228252</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.2038 1.2038 1.2038</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_72'>
+      <static>true</static>
+      <pose>29.2368 2.52254 0 0 0 4.88994</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.11008 1.11008 1.11008</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_73'>
+      <static>true</static>
+      <pose>-29.224 -2.57988 0 0 0 5.25339</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19606 1.19606 1.19606</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_74'>
+      <static>true</static>
+      <pose>-20.8746 -2.45952 0 0 0 1.38864</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1219 1.1219 1.1219</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_75'>
+      <static>true</static>
+      <pose>-12.5253 -2.33917 0 0 0 3.84809</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.0962 1.0962 1.0962</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_76'>
+      <static>true</static>
+      <pose>-4.17596 -2.21882 0 0 0 4.23867</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.0756 1.0756 1.0756</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_77'>
+      <static>true</static>
+      <pose>4.17338 -2.09848 0 0 0 4.52051</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23253 1.23253 1.23253</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_78'>
+      <static>true</static>
+      <pose>12.5227 -1.97816 0 0 0 2.52074</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.09675 1.09675 1.09675</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_79'>
+      <static>true</static>
+      <pose>20.8721 -1.85784 0 0 0 2.72696</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.12365 1.12365 1.12365</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_80'>
+      <static>true</static>
+      <pose>29.2214 -1.73752 0 0 0 2.42373</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1039 1.1039 1.1039</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_81'>
+      <static>true</static>
+      <pose>-29.2137 -6.95451 0 0 0 0.972158</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17433 1.17433 1.17433</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_82'>
+      <static>true</static>
+      <pose>-20.8681 -6.81778 0 0 0 0.0916047</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17959 1.17959 1.17959</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_83'>
+      <static>true</static>
+      <pose>-12.5224 -6.68106 0 0 0 2.40123</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.13872 1.13872 1.13872</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_84'>
+      <static>true</static>
+      <pose>-4.1767 -6.54435 0 0 0 4.63327</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.12126 1.12126 1.12126</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_85'>
+      <static>true</static>
+      <pose>4.16898 -6.40765 0 0 0 4.08193</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.11077 1.11077 1.11077</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_86'>
+      <static>true</static>
+      <pose>12.5147 -6.27096 0 0 0 5.77796</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17887 1.17887 1.17887</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_87'>
+      <static>true</static>
+      <pose>20.8603 -6.13427 0 0 0 5.08803</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.21006 1.21006 1.21006</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_88'>
+      <static>true</static>
+      <pose>29.206 -5.99759 0 0 0 1.96004</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.21283 1.21283 1.21283</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_89'>
+      <static>true</static>
+      <pose>-29.2035 -11.3291 0 0 0 0.0377291</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.20071 1.20071 1.20071</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_90'>
+      <static>true</static>
+      <pose>-20.8615 -11.176 0 0 0 5.30244</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17436 1.17436 1.17436</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_91'>
+      <static>true</static>
+      <pose>-12.5195 -11.023 0 0 0 4.03816</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1943 1.1943 1.1943</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_92'>
+      <static>true</static>
+      <pose>-4.17744 -10.8699 0 0 0 2.51773</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17099 1.17099 1.17099</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_93'>
+      <static>true</static>
+      <pose>4.16457 -10.7168 0 0 0 4.51678</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1345 1.1345 1.1345</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_94'>
+      <static>true</static>
+      <pose>12.5066 -10.5638 0 0 0 4.25882</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23711 1.23711 1.23711</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_95'>
+      <static>true</static>
+      <pose>20.8486 -10.4107 0 0 0 0.206671</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.08567 1.08567 1.08567</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_96'>
+      <static>true</static>
+      <pose>29.1906 -10.2577 0 0 0 4.30852</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.06483 1.06483 1.06483</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_97'>
+      <static>true</static>
+      <pose>-29.1932 -15.7038 0 0 0 3.88903</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.09378 1.09378 1.09378</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_98'>
+      <static>true</static>
+      <pose>-20.8549 -15.5343 0 0 0 3.56779</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.2134 1.2134 1.2134</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_99'>
+      <static>true</static>
+      <pose>-12.5165 -15.3649 0 0 0 0.0358716</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.05026 1.05026 1.05026</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_100'>
+      <static>true</static>
+      <pose>-4.17818 -15.1954 0 0 0 1.64349</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.12122 1.12122 1.12122</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_101'>
+      <static>true</static>
+      <pose>4.16016 -15.026 0 0 0 5.38818</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.20292 1.20292 1.20292</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_102'>
+      <static>true</static>
+      <pose>12.4985 -14.8566 0 0 0 2.14479</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.09227 1.09227 1.09227</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_103'>
+      <static>true</static>
+      <pose>20.8369 -14.6871 0 0 0 5.52298</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.20571 1.20571 1.20571</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_104'>
+      <static>true</static>
+      <pose>29.1752 -14.5177 0 0 0 1.96808</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.20244 1.20244 1.20244</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_105'>
+      <static>true</static>
+      <pose>-29.183 -20.0784 0 0 0 1.17034</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.2565 1.2565 1.2565</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_106'>
+      <static>true</static>
+      <pose>-20.8483 -19.8926 0 0 0 3.16334</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.08667 1.08667 1.08667</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_107'>
+      <static>true</static>
+      <pose>-12.5136 -19.7068 0 0 0 4.24526</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24342 1.24342 1.24342</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_108'>
+      <static>true</static>
+      <pose>-4.17892 -19.5209 0 0 0 1.20079</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.26097 1.26097 1.26097</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_109'>
+      <static>true</static>
+      <pose>4.15576 -19.3351 0 0 0 4.43635</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.14205 1.14205 1.14205</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_110'>
+      <static>true</static>
+      <pose>12.4904 -19.1494 0 0 0 3.4394</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25275 1.25275 1.25275</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_111'>
+      <static>true</static>
+      <pose>20.8251 -18.9636 0 0 0 5.85897</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.22242 1.22242 1.22242</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_112'>
+      <static>true</static>
+      <pose>29.1598 -18.7778 0 0 0 5.82185</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.10439 1.10439 1.10439</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_113'>
+      <static>true</static>
+      <pose>-29.1727 -24.453 0 0 0 5.86485</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17867 1.17867 1.17867</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_114'>
+      <static>true</static>
+      <pose>-20.8417 -24.2508 0 0 0 3.47189</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16536 1.16536 1.16536</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_115'>
+      <static>true</static>
+      <pose>-12.5107 -24.0487 0 0 0 5.02432</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.26913 1.26913 1.26913</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_116'>
+      <static>true</static>
+      <pose>-4.17966 -23.8465 0 0 0 3.73534</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23997 1.23997 1.23997</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_117'>
+      <static>true</static>
+      <pose>4.15135 -23.6443 0 0 0 6.25365</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.20335 1.20335 1.20335</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_118'>
+      <static>true</static>
+      <pose>12.4824 -23.4422 0 0 0 2.03915</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.26837 1.26837 1.26837</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_119'>
+      <static>true</static>
+      <pose>20.8134 -23.24 0 0 0 3.70178</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.25401 1.25401 1.25401</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_120'>
+      <static>true</static>
+      <pose>29.1444 -23.0379 0 0 0 4.77097</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19881 1.19881 1.19881</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_121'>
+      <static>true</static>
+      <pose>-29.1624 -28.8277 0 0 0 4.99457</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23093 1.23093 1.23093</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_122'>
+      <static>true</static>
+      <pose>-20.8351 -28.6091 0 0 0 3.79742</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.11132 1.11132 1.11132</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_123'>
+      <static>true</static>
+      <pose>-12.5078 -28.3906 0 0 0 1.04901</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.1598 1.1598 1.1598</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_124'>
+      <static>true</static>
+      <pose>-4.1804 -28.172 0 0 0 5.43549</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.23561 1.23561 1.23561</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_125'>
+      <static>true</static>
+      <pose>4.14694 -27.9535 0 0 0 4.17464</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.2537 1.2537 1.2537</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_126'>
+      <static>true</static>
+      <pose>12.4743 -27.735 0 0 0 3.84519</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.14625 1.14625 1.14625</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_127'>
+      <static>true</static>
+      <pose>20.8016 -27.5164 0 0 0 4.05643</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18928 1.18928 1.18928</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_128'>
+      <static>true</static>
+      <pose>29.129 -27.2979 0 0 0 0.93206</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.17566 1.17566 1.17566</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_129'>
+      <static>true</static>
+      <pose>-29.1522 -33.2023 0 0 0 0.207115</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18511 1.18511 1.18511</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_130'>
+      <static>true</static>
+      <pose>-20.8285 -32.9674 0 0 0 3.25564</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.21355 1.21355 1.21355</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_131'>
+      <static>true</static>
+      <pose>-12.5048 -32.7324 0 0 0 3.23615</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24428 1.24428 1.24428</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_132'>
+      <static>true</static>
+      <pose>-4.18114 -32.4975 0 0 0 3.07757</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.07628 1.07628 1.07628</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_133'>
+      <static>true</static>
+      <pose>4.14254 -32.2626 0 0 0 0.304732</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16908 1.16908 1.16908</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_134'>
+      <static>true</static>
+      <pose>12.4662 -32.0278 0 0 0 2.41688</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.24002 1.24002 1.24002</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_135'>
+      <static>true</static>
+      <pose>20.7899 -31.7929 0 0 0 2.84077</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19879 1.19879 1.19879</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_136'>
+      <static>true</static>
+      <pose>29.1136 -31.558 0 0 0 2.59544</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.0836 1.0836 1.0836</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_137'>
+      <static>true</static>
+      <pose>-29.1419 -37.5769 0 0 0 2.55579</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.10764 1.10764 1.10764</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_138'>
+      <static>true</static>
+      <pose>-20.8219 -37.3256 0 0 0 4.50879</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.05407 1.05407 1.05407</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_139'>
+      <static>true</static>
+      <pose>-12.5019 -37.0743 0 0 0 5.1079</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18387 1.18387 1.18387</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_140'>
+      <static>true</static>
+      <pose>-4.18188 -36.8231 0 0 0 2.80697</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.18596 1.18596 1.18596</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_141'>
+      <static>true</static>
+      <pose>4.13813 -36.5718 0 0 0 6.25281</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.16138 1.16138 1.16138</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_142'>
+      <static>true</static>
+      <pose>12.4581 -36.3206 0 0 0 0.466592</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.0637 1.0637 1.0637</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_143'>
+      <static>true</static>
+      <pose>20.7782 -36.0693 0 0 0 3.75282</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.19951 1.19951 1.19951</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+    <model name='tree_144'>
+      <static>true</static>
+      <pose>29.0982 -35.8181 0 0 0 1.38097</pose>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry><mesh>
+            <uri>model://orchard/orchard_tree_1.dae</uri>
+            <scale>1.10194 1.10194 1.10194</scale>
+          </mesh></geometry>
+        </visual>
+        <collision name='trunk_collision'>
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+  </world>
+</sdf>
