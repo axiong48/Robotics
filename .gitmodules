@@ -4,3 +4,6 @@
 [submodule "MRTP/amiga-ros2-bridge"]
 	path = MRTP/amiga-ros2-bridge
 	url = https://github.com/ucmercedrobotics/amiga-ros2-bridge
+[submodule "MRTP/src/amiga-ros2-bridge"]
+	path = MRTP/src/amiga-ros2-bridge
+	url = https://github.com/axiong48/Robotics/tree/main
