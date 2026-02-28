@@ -1,0 +1,3 @@
+[submodule "src/amiga-ros2-bridge"]
+    path = src/amiga-ros2-bridge
+    url = https://github.com/ucmercedrobotics/amiga-ros2-bridge.git
