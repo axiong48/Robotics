@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="bno085" params="parent_link bno085_link_name joint_origin_xyz joint_origin_rpy">
+
+    <link name="${bno085_link_name}">
+      
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.05"/> <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001"/>
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+           <mesh filename="package://amiga_ros2_description/meshes/${bno085_link_name}_link.STL" scale="1 1 1"/>
+        </geometry>
+        <material name="blue">
+            <color rgba="0.1 0.1 0.8 1"/>
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+           <box size="0.05 0.05 0.02"/> </geometry>
+      </collision>
+
+    </link>
+
+    <joint name="${bno085_link_name}_joint" type="fixed">
+      <origin xyz="${joint_origin_xyz}" rpy="${joint_origin_rpy}"/>
+      <parent link="${parent_link}"/>
+      <child link="${bno085_link_name}"/>
+    </joint>
+
+  </xacro:macro>
+
+</robot>

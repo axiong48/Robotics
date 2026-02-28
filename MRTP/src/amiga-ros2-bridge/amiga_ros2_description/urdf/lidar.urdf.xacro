@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <xacro:macro name="lidar" params="parent_link lidar_link_name joint_origin_xyz joint_origin_rpy">
+
+    <link name="${lidar_link_name}">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.2"/>
+        <inertia ixx="0.0001" ixy="0.0" ixz="0.0" iyy="0.0001" iyz="0.0" izz="0.0001"/>
+      </inertial>
+      <!-- temporary lidar visual -->
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+           <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+        <material name="black">
+            <color rgba="0.1 0.1 0.1 1"/>
+        </material>
+      </visual>
+
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+           <cylinder radius="0.05" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="${lidar_link_name}_joint" type="fixed">
+      <origin xyz="${joint_origin_xyz}" rpy="${joint_origin_rpy}"/>
+      <parent link="${parent_link}"/>
+      <child link="${lidar_link_name}"/>
+    </joint>
+    <!-- gazebo lidar -->
+    <gazebo reference="${lidar_link_name}">
+      <sensor name="lidar_sensor" type="gpu_lidar">
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>true</always_on>
+        <visualize>true</visualize> 
+        <update_rate>10</update_rate>
+        
+        <topic>/scan</topic> 
+        
+        <gz_frame_id>${lidar_link_name}</gz_frame_id>
+        
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>360</samples>
+              <resolution>1.0</resolution>
+              <min_angle>-3.14159</min_angle> 
+              <max_angle>3.14159</max_angle>  
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.15</min> 
+            <max>10.0</max> 
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+      </sensor>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>
