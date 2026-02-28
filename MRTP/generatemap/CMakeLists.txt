@@ -20,24 +20,25 @@ find_package(geometry_msgs REQUIRED)
 find_package(geographic_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
-# find_package(ament_index_cpp REQUIRED)
-
-# find_package(amiga_navigation_interfaces REQUIRED)
-# find_package(kortex_interfaces REQUIRED)
-# find_package(amiga_interfaces REQUIRED)
+find_package(ament_index_cpp REQUIRED) 
+find_package(std_msgs REQUIRED)
 
 # System Libraries
 find_package(nlohmann_json REQUIRED)
-# find_package(LibXml2 REQUIRED)
 
+# --- UBUNTU GEOGRAPHICLIB WORKAROUND ---
+# Tell CMake where Ubuntu hides the GeographicLib config file
+list(APPEND CMAKE_MODULE_PATH "/usr/share/cmake/geographiclib")
+find_package(GeographicLib REQUIRED)
+# ---------------------------------------
 
-# NOTE: This assumes 'tcp_demux_node.cpp' is in the root of the folder.
-# If you move it to a 'src' folder, change this to "src/tcp_demux_node.cpp"
+# Define Executable
 add_executable(tcp_demux_node src/tcp_demux_node.cpp)
 
-# Include directories for LibXml2
-target_include_directories(tcp_demux_node PUBLIC ${LIBXML2_INCLUDE_DIR})
-
+# Include directories (Needed for GeographicLib headers)
+target_include_directories(tcp_demux_node PUBLIC 
+  ${GeographicLib_INCLUDE_DIRS}
+)
 
 # Link ROS 2 dependencies
 ament_target_dependencies(tcp_demux_node
@@ -49,19 +50,27 @@ ament_target_dependencies(tcp_demux_node
   tf2
   tf2_geometry_msgs
   ament_index_cpp
-#  amiga_navigation_interfaces
-#  kortex_interfaces
-#  amiga_interfaces
+  std_msgs
 )
 
 # Link System dependencies
 target_link_libraries(tcp_demux_node
   nlohmann_json::nlohmann_json
-  ${LIBXML2_LIBRARIES}
+  ${GeographicLib_LIBRARIES}
 )
 
+# Install the C++ executable
 install(TARGETS tcp_demux_node
   DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install the launch directory so ROS can find your python files
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
 )
 
 ament_package()

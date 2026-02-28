@@ -14,16 +14,15 @@
 
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/string.hpp>
-
-
 #include <nlohmann/json.hpp>
+#include <GeographicLib/UTMUPS.hpp>
+
 using json = nlohmann::json;
 
-const double EARTH_RADIUS = 6378137.0;
-const double PI = 3.14159265358979323846;
-const double DEG_TO_RAD = PI / 180.0;
 
-// Tree models
+const double PI = 3.14159265358979323846;
+
+
 const std::vector<std::string> TREE_MODELS = {
     "model://orchard/orchard_tree_1.dae",
     "model://orchard/orchard_tree_3.dae",
@@ -31,10 +30,10 @@ const std::vector<std::string> TREE_MODELS = {
     "model://orchard/orchard_tree_5.dae"};
 
 const std::string GROUND_URI = "model://orchard/orchard_world.dae";
-const double TRUNK_HEIGHT = 1.0;
-const double TRUNK_RADIUS = 0.2;
-const double TREE_WIDTH_M = 3.5;
-const double MODEL_WIDTH_M = 3.0;
+const double TRUNK_HEIGHT = 3.0;
+const double TRUNK_RADIUS = 0.25;
+const double TREE_WIDTH_M = 5.0;
+const double MODEL_WIDTH_M = 1.0;
 
 class TcpDemuxNode : public rclcpp::Node
 {
@@ -55,11 +54,9 @@ public:
     orchard_pub_ = this->create_publisher<std_msgs::msg::String>(
         this->get_parameter("orchard_topic").as_string(), 1);
 
-    // Seed the random number generator
     std::srand(std::time(nullptr));
 
-    server_thread_ = std::thread([this]()
-                                 { this->server_loop(); });
+    server_thread_ = std::thread([this]() { this->server_loop(); });
   }
 
   ~TcpDemuxNode() override
@@ -70,22 +67,11 @@ public:
   }
 
 private:
-  std::pair<double, double> latLonToMeters(double lat, double lon, double anchor_lat, double anchor_lon)
-  {
-    double r_lat = anchor_lat * DEG_TO_RAD;
-    double d_lat = (lat - anchor_lat) * DEG_TO_RAD;
-    double d_lon = (lon - anchor_lon) * DEG_TO_RAD;
-
-    double x = d_lon * EARTH_RADIUS * cos(r_lat);
-    double y = d_lat * EARTH_RADIUS;
-    return {x, y};
-  }
-
   double randomDouble(double min, double max)
   {
     return min + (double)rand() / RAND_MAX * (max - min);
   }
-
+  // generates SDF for gazebo
   void generateSDF(const std::string &json_str)
   {
     try
@@ -96,20 +82,34 @@ private:
 
       RCLCPP_INFO(this->get_logger(), "Generating SDF for %zu trees...", tree_data.size());
 
-      // after reading, determine where tree is 
+      // Calculate Average Lat/Lon (Geometric Center)
       double sum_lat = 0.0, sum_lon = 0.0;
       for (const auto &t : tree_data)
       {
         sum_lat += t["lat"].get<double>();
         sum_lon += t["lon"].get<double>();
       }
-      double anchor_lat = sum_lat / tree_data.size();
-      double anchor_lon = sum_lon / tree_data.size();
+      double anchor_lat_gps = sum_lat / tree_data.size();
+      double anchor_lon_gps = sum_lon / tree_data.size();
 
-      // output path
+      // Calculate Anchor UTM using GeographicLib
+      int anchor_zone;
+      bool anchor_northp;
+      double anchor_easting, anchor_northing;
+
+      try {
+          GeographicLib::UTMUPS::Forward(anchor_lat_gps, anchor_lon_gps, anchor_zone, anchor_northp, anchor_easting, anchor_northing);
+      } catch (const GeographicLib::GeographicErr& e) {
+          RCLCPP_ERROR(this->get_logger(), "GeographicLib Anchor Conversion Failed: %s", e.what());
+          return;
+      }
+
+      // To determine the outpath
       std::string output_path_param = this->get_parameter("output_path").as_string();
       std::string final_path = output_path_param.empty() ? "generated_orchard.sdf" : output_path_param;
 
+      RCLCPP_INFO(this->get_logger(), "Calculated Anchor GPS: %.6f, %.6f (Zone %d%s)", 
+                  anchor_lat_gps, anchor_lon_gps, anchor_zone, (anchor_northp ? "N" : "S"));
       RCLCPP_INFO(this->get_logger(), "Saving world to: %s", final_path.c_str());
 
       std::ofstream sdf(final_path);
@@ -119,14 +119,13 @@ private:
         return;
       }
 
-      
       sdf << "<?xml version='1.0' encoding='ASCII'?>\n"
           << "<sdf version='1.4'>\n"
           << "  <world name='procedural_orchard'>\n"
           << "    <spherical_coordinates>\n"
           << "      <surface_model>EARTH_WGS84</surface_model>\n"
-          << "      <latitude_deg>" << anchor_lat << "</latitude_deg>\n"
-          << "      <longitude_deg>" << anchor_lon << "</longitude_deg>\n"
+          << "      <latitude_deg>" << anchor_lat_gps << "</latitude_deg>\n"
+          << "      <longitude_deg>" << anchor_lon_gps << "</longitude_deg>\n"
           << "      <elevation>0.0</elevation>\n"
           << "      <heading_deg>0</heading_deg>\n"
           << "    </spherical_coordinates>\n";
@@ -170,21 +169,35 @@ private:
     </model>
           )";
 
-      // generate the trees
+      // Generate Trees
       for (const auto &t : tree_data)
       {
         int idx = t["tree_index"].get<int>();
         double lat = t["lat"].get<double>();
         double lon = t["lon"].get<double>();
 
-        auto [world_x, world_y] = latLonToMeters(lat, lon, anchor_lat, anchor_lon);
+        // Convert Tree GPS to UTM using GeographicLib
+        int tree_zone;
+        bool tree_northp;
+        double tree_easting, tree_northing;
 
+        try {
+            GeographicLib::UTMUPS::Forward(lat, lon, tree_zone, tree_northp, tree_easting, tree_northing);
+        } catch (const GeographicLib::GeographicErr& e) {
+            RCLCPP_ERROR(this->get_logger(), "GeographicLib Tree %d Conversion Failed: %s", idx, e.what());
+            continue; 
+        }
+
+        // Calculate difference in meters from anchor origin
+        double world_x = tree_easting - anchor_easting;
+        double world_y = tree_northing - anchor_northing;
+
+        // Randomize visuals
         double base_scale = TREE_WIDTH_M / MODEL_WIDTH_M;
         double random_factor = randomDouble(0.9, 1.1);
         double final_scale = base_scale * random_factor;
         double world_yaw = randomDouble(0, 2 * PI);
 
-        // grabs random tree models
         int model_idx = std::rand() % TREE_MODELS.size();
         std::string selected_model = TREE_MODELS[model_idx];
 
