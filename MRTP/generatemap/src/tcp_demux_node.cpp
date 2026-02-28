@@ -19,9 +19,7 @@
 
 using json = nlohmann::json;
 
-
 const double PI = 3.14159265358979323846;
-
 
 const std::vector<std::string> TREE_MODELS = {
     "model://orchard/orchard_tree_1.dae",
@@ -30,9 +28,9 @@ const std::vector<std::string> TREE_MODELS = {
     "model://orchard/orchard_tree_5.dae"};
 
 const std::string GROUND_URI = "model://orchard/orchard_world.dae";
-const double TRUNK_HEIGHT = 3.0;
+const double TRUNK_HEIGHT = 2.0;
 const double TRUNK_RADIUS = 0.25;
-const double TREE_WIDTH_M = 5.0;
+const double TREE_WIDTH_M = 3.5;
 const double MODEL_WIDTH_M = 1.0;
 
 class TcpDemuxNode : public rclcpp::Node
@@ -56,7 +54,8 @@ public:
 
     std::srand(std::time(nullptr));
 
-    server_thread_ = std::thread([this]() { this->server_loop(); });
+    server_thread_ = std::thread([this]()
+                                 { this->server_loop(); });
   }
 
   ~TcpDemuxNode() override
@@ -97,18 +96,21 @@ private:
       bool anchor_northp;
       double anchor_easting, anchor_northing;
 
-      try {
-          GeographicLib::UTMUPS::Forward(anchor_lat_gps, anchor_lon_gps, anchor_zone, anchor_northp, anchor_easting, anchor_northing);
-      } catch (const GeographicLib::GeographicErr& e) {
-          RCLCPP_ERROR(this->get_logger(), "GeographicLib Anchor Conversion Failed: %s", e.what());
-          return;
+      try
+      {
+        GeographicLib::UTMUPS::Forward(anchor_lat_gps, anchor_lon_gps, anchor_zone, anchor_northp, anchor_easting, anchor_northing);
+      }
+      catch (const GeographicLib::GeographicErr &e)
+      {
+        RCLCPP_ERROR(this->get_logger(), "GeographicLib Anchor Conversion Failed: %s", e.what());
+        return;
       }
 
       // To determine the outpath
       std::string output_path_param = this->get_parameter("output_path").as_string();
       std::string final_path = output_path_param.empty() ? "generated_orchard.sdf" : output_path_param;
 
-      RCLCPP_INFO(this->get_logger(), "Calculated Anchor GPS: %.6f, %.6f (Zone %d%s)", 
+      RCLCPP_INFO(this->get_logger(), "Calculated Anchor GPS: %.6f, %.6f (Zone %d%s)",
                   anchor_lat_gps, anchor_lon_gps, anchor_zone, (anchor_northp ? "N" : "S"));
       RCLCPP_INFO(this->get_logger(), "Saving world to: %s", final_path.c_str());
 
@@ -181,11 +183,14 @@ private:
         bool tree_northp;
         double tree_easting, tree_northing;
 
-        try {
-            GeographicLib::UTMUPS::Forward(lat, lon, tree_zone, tree_northp, tree_easting, tree_northing);
-        } catch (const GeographicLib::GeographicErr& e) {
-            RCLCPP_ERROR(this->get_logger(), "GeographicLib Tree %d Conversion Failed: %s", idx, e.what());
-            continue; 
+        try
+        {
+          GeographicLib::UTMUPS::Forward(lat, lon, tree_zone, tree_northp, tree_easting, tree_northing);
+        }
+        catch (const GeographicLib::GeographicErr &e)
+        {
+          RCLCPP_ERROR(this->get_logger(), "GeographicLib Tree %d Conversion Failed: %s", idx, e.what());
+          continue;
         }
 
         // Calculate difference in meters from anchor origin
