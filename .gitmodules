@@ -1,3 +1,6 @@
 [submodule "MRTP/clearpath_simulator"]
 	path = MRTP/clearpath_simulator
 	url = https://github.com/axiong48/Robotics
+[submodule "MRTP/amiga-ros2-bridge"]
+	path = MRTP/amiga-ros2-bridge
+	url = https://github.com/ucmercedrobotics/amiga-ros2-bridge
