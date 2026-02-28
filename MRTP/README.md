@@ -30,7 +30,7 @@ Ensure
 ### 1. Clone the Workspace
 Clone the main repository and pull the Clearpath simulator dependency:
 ```bash
-git clone [https://github.com/axiong48/Robotics.git](https://github.com/axiong48/Robotics.git)
+git clone https://github.com/axiong48/Robotics
 cd Robotics
 git submodule update --init --recursive
 ```
