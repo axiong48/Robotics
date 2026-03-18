@@ -56,7 +56,7 @@ Step 2 Terminal 2: Feed the Map Data
 Navigate to the map generator and send the binary test data via Netcat:
 ```docker
 cd generatemap
-nc localhost 12346 < create_test.bin
+nc localhost 12346 < castle.bin
 ```
 
 Step 3 Terminal 2: Launch Simulation Bringup
