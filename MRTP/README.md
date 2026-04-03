@@ -40,9 +40,9 @@ git submodule update --init --recursive
 
 2. EASY BUILD AND RUN:
 
-`cd /MRTP/MRTP`
-`./genmap.sh test.bin` (uses test.bin)
-`./genmap.sh name_of_file_in_generatemap_folder.bin` (optional files)
+```cd /MRTP/MRTP```
+```./genmap.sh test.bin``` (uses test.bin)
+```./genmap.sh name_of_file_in_generatemap_folder.bin``` (optional files)
 
 The following instructions are if you want to use 2 terminals.
 
