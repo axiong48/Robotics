@@ -28,9 +28,9 @@ const std::vector<std::string> TREE_MODELS = {
     "model://orchard/orchard_tree_5.dae"};
 
 const std::string GROUND_URI = "model://orchard/orchard_world.dae";
-const double TRUNK_HEIGHT = 2.0;
+const double TRUNK_HEIGHT = 1.0; // initial 2
 const double TRUNK_RADIUS = 0.25;
-const double TREE_WIDTH_M = 3.5;
+const double TREE_WIDTH_M = 1.5; // initial 3.5
 const double MODEL_WIDTH_M = 1.0;
 
 class TcpDemuxNode : public rclcpp::Node
@@ -75,10 +75,82 @@ private:
   {
     try
     {
-      auto tree_data = json::parse(json_str);
-      if (tree_data.empty())
-        return;
+      auto parsed = json::parse(json_str);
+      json tree_data;
 
+      RCLCPP_INFO(this->get_logger(), "parsed.type_name() = %s, parsed.size() = %zu",
+                  parsed.type_name(), parsed.size());
+
+      // Check top-level is already an array of tree objects
+      if (parsed.is_array())
+      {
+        if (!parsed.empty() &&
+            parsed[0].is_object() &&
+            parsed[0].contains("tree_index") &&
+            parsed[0].contains("lat") &&
+            parsed[0].contains("lon"))
+        {
+          RCLCPP_INFO(this->get_logger(), "Detected direct tree array.");
+          tree_data = parsed;
+        }
+        else
+        {
+          // Search inside wrapper array
+          for (const auto &item : parsed)
+          {
+            if (item.is_array() &&
+                !item.empty() &&
+                item[0].is_object() &&
+                item[0].contains("tree_index") &&
+                item[0].contains("lat") &&
+                item[0].contains("lon"))
+            {
+              RCLCPP_INFO(this->get_logger(), "Detected nested tree array inside top-level array.");
+              tree_data = item;
+              break;
+            }
+
+            if (item.is_object() &&
+                item.contains("trees") &&
+                item["trees"].is_array() &&
+                !item["trees"].empty() &&
+                item["trees"][0].is_object() &&
+                item["trees"][0].contains("tree_index") &&
+                item["trees"][0].contains("lat") &&
+                item["trees"][0].contains("lon"))
+            {
+              RCLCPP_INFO(this->get_logger(), "Detected object containing trees array inside top-level array.");
+              tree_data = item["trees"];
+              break;
+            }
+          }
+        }
+      }
+      // check if top-level object with "trees"
+      else if (parsed.is_object())
+      {
+        if (parsed.contains("trees") &&
+            parsed["trees"].is_array() &&
+            !parsed["trees"].empty() &&
+            parsed["trees"][0].is_object() &&
+            parsed["trees"][0].contains("tree_index") &&
+            parsed["trees"][0].contains("lat") &&
+            parsed["trees"][0].contains("lon"))
+        {
+          RCLCPP_INFO(this->get_logger(), "Detected top-level object with trees array.");
+          tree_data = parsed["trees"];
+        }
+      }
+
+      if (tree_data.empty())
+      {
+        RCLCPP_ERROR(this->get_logger(),
+                     "Unsupported JSON format: could not locate a valid tree array.");
+        return;
+      }
+
+      RCLCPP_INFO(this->get_logger(), "tree_data[0].type_name() = %s",
+                  tree_data[0].type_name());
       RCLCPP_INFO(this->get_logger(), "Generating SDF for %zu trees...", tree_data.size());
 
       // Calculate Average Lat/Lon (Geometric Center)
@@ -98,7 +170,9 @@ private:
 
       try
       {
-        GeographicLib::UTMUPS::Forward(anchor_lat_gps, anchor_lon_gps, anchor_zone, anchor_northp, anchor_easting, anchor_northing);
+        GeographicLib::UTMUPS::Forward(anchor_lat_gps, anchor_lon_gps,
+                                       anchor_zone, anchor_northp,
+                                       anchor_easting, anchor_northing);
       }
       catch (const GeographicLib::GeographicErr &e)
       {
@@ -106,7 +180,7 @@ private:
         return;
       }
 
-      // To determine the outpath
+      // Output path
       std::string output_path_param = this->get_parameter("output_path").as_string();
       std::string final_path = output_path_param.empty() ? "generated_orchard.sdf" : output_path_param;
 
@@ -133,43 +207,43 @@ private:
           << "    </spherical_coordinates>\n";
 
       sdf << R"(
-    <physics type='ode'>
-      <max_step_size>0.003</max_step_size>
-      <real_time_factor>1.0</real_time_factor>
-      <gravity>0 0 -9.8</gravity>
-    </physics>
-    <plugin name='gz::sim::systems::Physics' filename='libgz-sim-physics-system.so'/>
-    <plugin name='gz::sim::systems::UserCommands' filename='libgz-sim-user-commands-system.so'/>
-    <plugin name='gz::sim::systems::SceneBroadcaster' filename='libgz-sim-scene-broadcaster-system.so'/>
-    <plugin name='gz::sim::systems::Sensors' filename='libgz-sim-sensors-system.so'>
-      <render_engine>ogre2</render_engine>
-    </plugin>
-    <plugin name='gz::sim::systems::Imu' filename='libgz-sim-imu-system.so'/>
-    <plugin name='gz::sim::systems::NavSat' filename='libgz-sim-navsat-system.so'/>
-    <scene>
-      <ambient>1 1 1 1</ambient>
-      <background>0.3 0.7 0.9 1</background>
-      <shadows>1</shadows>
-      <sky><clouds><speed>12</speed></clouds></sky>
-    </scene>
-    <light name='sun' type='directional'>
-      <cast_shadows>1</cast_shadows>
-      <pose>0 0 10 0 -0 0</pose>
-      <diffuse>1.0 1.0 1.0 1</diffuse>
-      <specular>0.2 0.2 0.2 1</specular>
-      <direction>-0.5 0.5 -1.0</direction>
-    </light>
-    <model name='orchard_ground'>
-      <static>true</static>
-      <pose>0 0 0 0 0 0</pose>
-      <link name='link'>
-        <collision name='col'><geometry><mesh><uri>)"
+      <physics type='ode'>
+        <max_step_size>0.003</max_step_size>
+        <real_time_factor>1.0</real_time_factor>
+        <gravity>0 0 -9.8</gravity>
+      </physics>
+      <plugin name='gz::sim::systems::Physics' filename='libgz-sim-physics-system.so'/>
+      <plugin name='gz::sim::systems::UserCommands' filename='libgz-sim-user-commands-system.so'/>
+      <plugin name='gz::sim::systems::SceneBroadcaster' filename='libgz-sim-scene-broadcaster-system.so'/>
+      <plugin name='gz::sim::systems::Sensors' filename='libgz-sim-sensors-system.so'>
+        <render_engine>ogre2</render_engine>
+      </plugin>
+      <plugin name='gz::sim::systems::Imu' filename='libgz-sim-imu-system.so'/>
+      <plugin name='gz::sim::systems::NavSat' filename='libgz-sim-navsat-system.so'/>
+      <scene>
+        <ambient>1 1 1 1</ambient>
+        <background>0.3 0.7 0.9 1</background>
+        <shadows>1</shadows>
+        <sky><clouds><speed>12</speed></clouds></sky>
+      </scene>
+      <light name='sun' type='directional'>
+        <cast_shadows>1</cast_shadows>
+        <pose>0 0 10 0 -0 0</pose>
+        <diffuse>1.0 1.0 1.0 1</diffuse>
+        <specular>0.2 0.2 0.2 1</specular>
+        <direction>-0.5 0.5 -1.0</direction>
+      </light>
+      <model name='orchard_ground'>
+        <static>true</static>
+        <pose>0 0 0 0 0 0</pose>
+        <link name='link'>
+          <collision name='col'><geometry><mesh><uri>)"
           << GROUND_URI << R"(</uri></mesh></geometry></collision>
-        <visual name='vis'><geometry><mesh><uri>)"
+          <visual name='vis'><geometry><mesh><uri>)"
           << GROUND_URI << R"(</uri></mesh></geometry></visual>
-      </link>
-    </model>
-          )";
+        </link>
+      </model>
+            )";
 
       // Generate Trees
       for (const auto &t : tree_data)
@@ -178,7 +252,6 @@ private:
         double lat = t["lat"].get<double>();
         double lon = t["lon"].get<double>();
 
-        // Convert Tree GPS to UTM using GeographicLib
         int tree_zone;
         bool tree_northp;
         double tree_easting, tree_northing;
@@ -242,7 +315,6 @@ private:
       RCLCPP_ERROR(this->get_logger(), "SDF Generation Error: %s", e.what());
     }
   }
-
   void server_loop()
   {
     int port = this->get_parameter("port").as_int();
